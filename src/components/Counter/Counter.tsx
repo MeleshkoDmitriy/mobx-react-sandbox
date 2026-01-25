@@ -4,7 +4,7 @@ import { observer } from 'mobx-react-lite';
 
 
 export const Counter = observer(() => {
-  const { count, increment, decrement, doubleCount, isPositiveCount } = counterStore;
+  const { count, increment, decrement, doubleCount, isPositiveCount, clearStorage } = counterStore;
 
   const textClasses = isPositiveCount ? styles.positive : styles.negative;
   return (
@@ -18,6 +18,7 @@ export const Counter = observer(() => {
         </div>
         <button onClick={decrement}>Decrement -1</button>
       </div>
+      <button onClick={clearStorage}>Clear Storage</button>
     </div>
   )
 })
