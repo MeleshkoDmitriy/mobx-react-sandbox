@@ -3,9 +3,14 @@ import { Item } from "./Item"
 
 interface ListProps {
   todos: Todo[]
+  isLoading: boolean
 }
 
-export const List = ({todos}: ListProps) => {
+export const List = ({todos, isLoading}: ListProps) => {
+  if (isLoading) {
+    return <div>Loading...</div>
+  }
+
   return (
     <div>
       {todos.map((todo) => (

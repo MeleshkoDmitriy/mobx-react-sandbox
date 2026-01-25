@@ -6,13 +6,14 @@ interface ItemProps {
 }
 
 export const Item = ({todo}: ItemProps) => {
-  const {todo: todoText, completed} = todo;
+  const {title, completed, category} = todo;
   const indicatorClasses = completed ? `${styles.indicator} ${styles.completed}` : styles.indicator;
 
   return (
     <div className={styles.item}>
-      <div className={indicatorClasses}></div>
-      <p>{todoText}</p>
+      <div className={indicatorClasses} />
+      <p>{title}</p>
+      <b>{category}</b>
     </div>
   )
 }

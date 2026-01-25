@@ -1,6 +1,6 @@
 export type Todo = {
-  id: string
-  todo: string
+  id: number
+  category: string
+  title: string
   completed: boolean
-  userId: number
 }
